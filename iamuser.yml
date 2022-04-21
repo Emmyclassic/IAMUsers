@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Template for creating IAM User
+
+Resources:
+  IamUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: ProjectManager
+      LoginProfile: 
+        Password: Cloudboosta123
+        PasswordResetRequired: true    
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/AdministratorAccess
+
+Resources:
+  IamUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: Developer
+      LoginProfile: 
+        Password: Cloudboosta123
+        PasswordResetRequired: true    
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/AmazonEC2FullAccess
+
+Resources:
+  IamUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: Itern
+      LoginProfile: 
+        Password: Cloudboosta123
+        PasswordResetRequired: true    
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+      
+   
+
+
+ 
